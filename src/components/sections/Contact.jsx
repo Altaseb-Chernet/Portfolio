@@ -209,7 +209,7 @@ const Contact = () => {
                   Schedule a Call
                 </Button>
                 <Button variant="secondary" size="lg" animated>
-                  View My GitHub
+                  <a href="https://github.com/Altaseb-Chernet">View My GitHub</a>
                 </Button>
               </div>
             </Card>

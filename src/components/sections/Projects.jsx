@@ -62,7 +62,7 @@ const Projects = () => {
               View Demo
             </Button>
             <Button variant="secondary" size="sm" className="flex-1">
-              GitHub
+              <a href="https://github.com/Altaseb-Chernet/">GitHub</a>
             </Button>
           </div>
         </div>

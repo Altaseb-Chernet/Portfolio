@@ -12,9 +12,9 @@ export const portfolioData = {
   },
   
   socialLinks: [
-    { name: "GitHub", url: "https://github.com/altaseb", icon: "github", username: "altaseb" },
+    { name: "GitHub", url: "https://github.com/altaseb-chernet", icon: "github", username: "altaseb" },
     { name: "LinkedIn", url: "https://linkedin.com/in/altaseb", icon: "linkedin", username: "altaseb-chernet" },
-    { name: "Email", url: "mailto:altaseb.chernet@example.com", icon: "email", username: "altaseb.chernet" },
+    { name: "Email", url: "altacher227@gmail.com", icon: "email", username: "altaseb.chernet" },
   ],
   
   skills: [
@@ -36,7 +36,7 @@ export const portfolioData = {
       image: "/project-food.jpg",
       technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       features: ["Admin Dashboard", "Order History", "Real-time Updates", "Payment Integration"],
-      githubUrl: "https://github.com/altaseb/food-ordering",
+      githubUrl: "https://github.com/Altaseb-Chernet/Resturant_Website",
       liveUrl: "#",
       status: "Completed"
     },
@@ -47,7 +47,7 @@ export const portfolioData = {
       image: "/project-bajaj.jpg",
       technologies: ["C++", "GUI", "Database", "File Handling"],
       features: ["Search Functionality", "Sort Algorithms", "Database Integration", "User-friendly GUI"],
-      githubUrl: "https://github.com/altaseb/bajaj-system",
+      githubUrl: "https://github.com/Altaseb-Chernet/DSA-With-C--GUI",
       liveUrl: "#",
       status: "Completed"
     },
@@ -58,7 +58,7 @@ export const portfolioData = {
       image: "/project-search.jpg",
       technologies: ["JavaScript", "API Integration", "Local Storage", "UI/UX"],
       features: ["Smart Search", "Real-time Ratings", "User Reviews", "Responsive Design"],
-      githubUrl: "https://github.com/altaseb/smart-search",
+      githubUrl: "https://github.com/Altaseb-Chernet/DSA-With-C--GUI",
       liveUrl: "#",
       status: "Completed"
     },

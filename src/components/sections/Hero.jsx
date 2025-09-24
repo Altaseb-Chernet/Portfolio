@@ -6,7 +6,7 @@ import AnimatedElement from '../ui/AnimatedElement';
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Background elements remain the same */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
@@ -26,8 +26,8 @@ const Hero = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button variant="primary" size="lg" animated>
-                  View My Projects
+                <Button  variant="primary" size="lg" animated>
+                  <a href="https://github.com/Altaseb-Chernet">View My Projects</a>
                 </Button>
                 <Button variant="secondary" size="lg" animated>
                   Download CV
@@ -53,8 +53,13 @@ const Hero = () => {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="w-80 h-80 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                  <div className="w-72 h-72 bg-slate-800 rounded-full flex items-center justify-center">
-                    <span className="text-8xl">👨‍💻</span>
+                  {/* THIS IS THE CHANGED PART - my Photo */}
+                  <div className="w-72 h-72 bg-slate-800 rounded-full flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="/images/profile.jpg" 
+                      alt="Altaseb Chernet"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 {/* Floating elements */}

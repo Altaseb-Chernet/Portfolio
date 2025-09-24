@@ -144,7 +144,7 @@ const Hackathons = () => {
                   Invite to Hackathon
                 </Button>
                 <Button variant="secondary" animated>
-                  View GitHub Profile
+                  <a href="https://github.com/Altaseb-Chernet">View GitHub Profile</a>
                 </Button>
               </div>
             </Card>
