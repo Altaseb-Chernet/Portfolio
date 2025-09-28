@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import Layout from './components/layout/Layout';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
@@ -11,13 +12,16 @@ import Testimonials from './components/sections/Testimonials';
 function App() {
   return (
     <Layout>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Hackathons />
-      <Testimonials />
-      <Contact />
+      <Routes>
+      <Route path='/' element={<Hero />}/>
+      <Route path='/About' element={<About />}/>
+      <Route path='/Skills' element={<Skills />}/>
+      <Route path='/Projects' element={<Projects />}/>
+      <Route path='/Hackathons' element={<Hackathons />}/>
+      <Route path='/Testimonials' element={<Testimonials />}/>
+      <Route path='/Contact' element={  <Contact />}/>
+      
+    </Routes>
     </Layout>
   );
 }
