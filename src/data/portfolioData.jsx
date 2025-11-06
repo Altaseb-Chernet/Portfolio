@@ -8,7 +8,7 @@ import {
   FaDatabase,
   FaGitAlt,
   FaGithub,
-  FaProjectDiagram, // ✅ new for Agile
+  FaProjectDiagram,
 } from "react-icons/fa";
 
 import {
