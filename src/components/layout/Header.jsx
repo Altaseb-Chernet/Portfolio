@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';   // <— use NavLink for active styles
+import { NavLink } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const cvLink = "https://drive.google.com/file/d/1G2I-g_wpAVfVg757c3HlUjp5Dt7yVySW/view?usp=sharing";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +15,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // each item points to a route path now
   const navItems = [
     { name: 'Home', to: '/' },
     { name: 'About', to: '/About' },
@@ -33,6 +33,7 @@ const Header = () => {
     >
       <nav className="container-custom py-4">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <NavLink
             to="/"
             className="text-2xl font-bold gradient-text hover:scale-110 transition-transform"
@@ -47,7 +48,7 @@ const Header = () => {
               <NavLink
                 key={item.name}
                 to={item.to}
-                end={item.to === '/'} // only on home exactly
+                end={item.to === '/'}
                 className={({ isActive }) =>
                   `text-gray-300 transition-all duration-300 font-medium relative group hover:text-white ${
                     isActive ? 'text-white' : ''
@@ -61,9 +62,16 @@ const Header = () => {
             ))}
           </div>
 
+          {/* Desktop CV Button */}
           <div className="hidden md:block">
             <Button variant="primary" size="sm" animated>
-              Download CV
+              <a 
+                href={cvLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
             </Button>
           </div>
 
@@ -91,29 +99,57 @@ const Header = () => {
             </div>
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 glass rounded-lg">
-            <div className="flex flex-col space-y-2 p-4">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.to}
-                  end={item.to === '/'}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 font-medium py-3 px-4 rounded-lg hover:bg-white/10"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </NavLink>
-              ))}
-              <Button variant="primary" className="w-full mt-2">
-                Download CV
-              </Button>
-            </div>
-          </div>
-        )}
       </nav>
+
+      {/* Mobile Sidebar Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-2/3 max-w-xs bg-gray-900/90 backdrop-blur-lg glass transform transition-transform duration-300 ease-in-out md:hidden z-50 ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {/* Close Button */}
+        <div className="flex justify-end p-4">
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="text-white text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+
+        {/* Menu Items */}
+        <div className="flex flex-col space-y-4 p-4">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.name}
+              to={item.to}
+              end={item.to === '/'}
+              className="text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2 px-2 rounded-lg hover:bg-white/10"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </NavLink>
+          ))}
+
+          <Button variant="primary" className="w-full mt-2">
+            <a
+              href={cvLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      {/* Background Overlay when menu is open */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm md:hidden z-40"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
     </header>
   );
 };

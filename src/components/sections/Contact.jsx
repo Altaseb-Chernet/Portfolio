@@ -100,7 +100,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent"></div>
       
-      <div className="container-custom relative z-10">
+      <div className="container-custom px-6 relative z-10">
         <AnimatedElement>
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -215,7 +215,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 glass border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 glass border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="What's this about?"
                   />
                 </div>
