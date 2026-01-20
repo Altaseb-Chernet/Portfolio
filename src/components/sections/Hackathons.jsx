@@ -8,7 +8,7 @@ const Hackathons = () => {
   return (
     <section id="hackathons" className="py-20 relative">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/60 to-slate-900/60"></div>
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-primary to-secondary"></div>
 
       <div className="container-custom px-6 relative z-10">

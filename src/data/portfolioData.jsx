@@ -123,6 +123,17 @@ export const portfolioData = {
     liveUrl: "https://techevent-tau.vercel.app/",
     status: "Completed"
   },
+  {
+    id: 6,
+    title: "mashabesh design website",
+    description: "🛍️ Mashabesha Design — Interactive Shopping Platform Built with Next.js, TypeScript, PostgreSQL, Prisma & Chapa Payment Mashabesha Design is a modern, interactive e-commerce platform.",
+    image: "/projects/mashabesh.png",
+    technologies: ["typescript", "nextjs", "tailwindcss", "postgresql", "prisma", "chapa"],
+    features: ["👕 Customer Features", "🎛️ Admin Dashboard", "💳 Payments", "Responsive Design", "Amharic/English"],
+    githubUrl: "https://",
+    liveUrl: "https://mashabeshdesign.com/",
+    status: "Completed"
+  }
 ],
 hackathons: [
   {

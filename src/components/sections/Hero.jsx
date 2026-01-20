@@ -8,11 +8,7 @@ const Hero = () => {
   const cvLink = "https://drive.google.com/file/d/1G2I-g_wpAVfVg757c3HlUjp5Dt7yVySW/view?usp=sharing";
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900"></div>
-      <div className="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       
       <div className="container-custom px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

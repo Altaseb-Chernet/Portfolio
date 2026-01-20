@@ -97,7 +97,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/60 to-slate-900/60"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent"></div>
       
       <div className="container-custom px-6 relative z-10">

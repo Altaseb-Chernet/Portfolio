@@ -6,7 +6,7 @@ import Card from '../ui/Card';
 const About = () => {
   return (
     <section id="about" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-800/60"></div>
       <div className="container-custom px-6 relative z-10">
         <AnimatedElement>
           <div className="text-center mb-16">

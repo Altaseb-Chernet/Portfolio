@@ -18,7 +18,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-800/60"></div>
       
       <div className="container-custom relative z-10">
         <AnimatedElement>

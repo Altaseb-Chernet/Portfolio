@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const Header = () => {
@@ -16,14 +15,25 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', to: '/' },
-    { name: 'About', to: '/About' },
-    { name: 'Skills', to: '/Skills' },
-    { name: 'Projects', to: '/Projects' },
-    { name: 'Hackathons', to: '/Hackathons' },
-    { name: 'Testimonials', to: '/Testimonials' },
-    { name: 'Contact', to: '/Contact' },
+    { name: 'Home', id: 'hero' },
+    { name: 'About', id: 'about' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Hackathons', id: 'hackathons' },
+    { name: 'Testimonials', id: 'testimonials' },
+    { name: 'Contact', id: 'contact' },
   ];
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -34,31 +44,24 @@ const Header = () => {
       <nav className="container-custom py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <NavLink
-            to="/"
+          <button
+            onClick={() => scrollToSection('hero')}
             className="text-2xl font-bold gradient-text hover:scale-110 transition-transform"
-            onClick={() => setIsMenuOpen(false)}
           >
             Altaseb
-          </NavLink>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <NavLink
+              <button
                 key={item.name}
-                to={item.to}
-                end={item.to === '/'}
-                className={({ isActive }) =>
-                  `text-gray-300 transition-all duration-300 font-medium relative group hover:text-white ${
-                    isActive ? 'text-white' : ''
-                  }`
-                }
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => scrollToSection(item.id)}
+                className="text-gray-300 transition-all duration-300 font-medium relative group hover:text-white"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
-              </NavLink>
+              </button>
             ))}
           </div>
 
@@ -120,15 +123,13 @@ const Header = () => {
         {/* Menu Items */}
         <div className="flex flex-col space-y-4 p-4">
           {navItems.map((item) => (
-            <NavLink
+            <button
               key={item.name}
-              to={item.to}
-              end={item.to === '/'}
-              className="text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2 px-2 rounded-lg hover:bg-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => scrollToSection(item.id)}
+              className="text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2 px-2 rounded-lg hover:bg-white/10"
             >
               {item.name}
-            </NavLink>
+            </button>
           ))}
 
           <Button variant="primary" className="w-full mt-2">

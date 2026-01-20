@@ -37,7 +37,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/60 to-slate-900/60"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent"></div>
 
       <div className="container mx-auto px-6 lg:px-20 relative z-10">

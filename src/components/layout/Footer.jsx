@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12 relative z-10">
       <div className="container-custom text-center">
         <div className="flex justify-center space-x-6 mb-6">
           {portfolioData.socialLinks.map((link) => (
