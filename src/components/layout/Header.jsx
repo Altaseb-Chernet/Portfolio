@@ -4,7 +4,7 @@ import Button from '../ui/Button';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const cvLink = "https://drive.google.com/file/d/1G2I-g_wpAVfVg757c3HlUjp5Dt7yVySW/view?usp=sharing";
+  const cvLink = "https://drive.google.com/file/d/1Vx9YdatDC52y0h2V1Xw-HMB9DVhXEOCr/view?usp=sharing";
 
   useEffect(() => {
     const handleScroll = () => {
