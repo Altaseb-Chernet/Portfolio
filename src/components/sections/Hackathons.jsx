@@ -103,20 +103,9 @@ const Hackathons = () => {
                     {achievement.icon}
                   </div>
                   <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors">
-                        {achievement.title}
-                      </h4>
-                      <span
-                        className={`px-2 py-1 rounded-full text-xs font-bold ${
-                          achievement.status === "Achieved"
-                            ? "bg-green-500/20 text-green-400"
-                            : "bg-blue-500/20 text-blue-400"
-                        }`}
-                      >
-                        {achievement.status}
-                      </span>
-                    </div>
+                    <h4 className="text-lg font-bold text-white group-hover:text-primary transition-colors mb-2">
+                      {achievement.title}
+                    </h4>
                     <p className="text-gray-400 text-sm mb-1">
                       {achievement.description}
                     </p>

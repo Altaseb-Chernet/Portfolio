@@ -9,6 +9,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaProjectDiagram,
+  FaJava,
 } from "react-icons/fa";
 
 import {
@@ -21,9 +22,11 @@ import {
   SiCplusplus,
   SiPostgresql,
   SiMysql,
+  SiTypescript,
+  SiPrisma,
 } from "react-icons/si";
 
-
+import { TbApi } from "react-icons/tb";
 
 
 
@@ -35,8 +38,8 @@ export const portfolioData = {
     university: "Debre Berhan University",
     age: "20",
     email: "altacher227@gmail.com",
-    phone: "+251 9889 951 542",
-    bio: "Motivated Software Engineering student and full-stack developer passionate about building efficient, scalable, and user-friendly web applications. Skilled in modern front-end and back-end technologies with strong foundations in data structures and algorithms.",
+    phone: "+251 970 208 456",
+    bio: "Aspiring Software Engineer with strong hands-on experience in full-stack web development, specializing in modern JavaScript and TypeScript ecosystems. Proficient in building scalable and responsive applications with solid backend integration. Passionate about building performant, user-focused solutions.",
     tagline: "Turning ideas into smart and scalable digital solutions.",
   },
   
@@ -47,24 +50,67 @@ export const portfolioData = {
   ],
   
   skills: [
-    { name: "HTML5", level: 95, category: "frontend", icon: <FaHtml5 className="text-orange-500" /> },
-    { name: "CSS3", level: 90, category: "frontend", icon: <FaCss3Alt className="text-blue-500" /> },
-    { name: "JavaScript", level: 90, category: "frontend", icon: <FaJsSquare className="text-yellow-400" /> },
-    { name: "React", level: 85, category: "frontend", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Next.js", level: 80, category: "frontend", icon: <SiNextdotjs className="text-white" /> },
-    { name: "Tailwind CSS", level: 85, category: "frontend", icon: <SiTailwindcss className="text-sky-400" /> },
-    { name: "Node.js", level: 80, category: "backend", icon: <FaNodeJs className="text-green-500" /> },
-    { name: "Express.js", level: 75, category: "backend", icon: <SiExpress className="text-gray-300" /> },
-    { name: "Python", level: 80, category: "backend", icon: <FaPython className="text-yellow-500" /> },
-    { name: "C++", level: 75, category: "backend", icon: <SiCplusplus className="text-blue-400" /> },
-    { name: "SQL / MySQL / PostgreSQL", level: 80, category: "database", icon: <FaDatabase className="text-blue-500" /> },
-    { name: "MongoDB", level: 80, category: "database", icon: <SiMongodb className="text-green-400" /> },
-    { name: "Firebase / Supabase", level: 70, category: "backend", icon: <SiFirebase className="text-orange-400" /> },
-    { name: "Git & GitHub", level: 85, category: "tools", icon: <FaGithub className="text-gray-300" /> },
-    { name: "Agile Methodology", level: 75, category: "tools", icon: <FaProjectDiagram className="text-purple-400" /> },
-
+    { name: "HTML5", category: "frontend", icon: <FaHtml5 /> },
+    { name: "CSS3", category: "frontend", icon: <FaCss3Alt /> },
+    { name: "JavaScript", category: "frontend", icon: <FaJsSquare /> },
+    { name: "TypeScript", category: "frontend", icon: <SiTypescript /> },
+    { name: "React", category: "frontend", icon: <FaReact /> },
+    { name: "Next.js", category: "frontend", icon: <SiNextdotjs /> },
+    { name: "Tailwind CSS", category: "frontend", icon: <SiTailwindcss /> },
+    { name: "Node.js", category: "backend", icon: <FaNodeJs /> },
+    { name: "Express.js", category: "backend", icon: <SiExpress /> },
+    { name: "Python", category: "backend", icon: <FaPython /> },
+    { name: "Java", category: "backend", icon: <FaJava /> },
+    { name: "C++", category: "backend", icon: <SiCplusplus /> },
+    { name: "RESTful APIs", category: "backend", icon: <TbApi /> },
+    { name: "SQL / MySQL / PostgreSQL", category: "database", icon: <FaDatabase /> },
+    { name: "MongoDB", category: "database", icon: <SiMongodb /> },
+    { name: "Firebase / Supabase", category: "database", icon: <SiFirebase /> },
+    { name: "Prisma", category: "database", icon: <SiPrisma /> },
+    { name: "Git & GitHub", category: "tools", icon: <FaGithub /> },
+    { name: "Agile Methodology", category: "tools", icon: <FaProjectDiagram /> },
   ],
   
+  experience: [
+    {
+      id: 1,
+      role: "Frontend Web Developer",
+      company: "Balina Software Company",
+      type: "Part-time",
+      location: "Debre Berhan",
+      duration: "Jun 2026 – Present",
+      description: "Technology-driven organization focused on designing, developing, and maintaining high-quality software solutions. Led the organization's version control system, ensuring seamless collaboration and workflow efficiency across teams, while building responsive frontend websites.",
+      technologies: ["React", "Tailwind CSS", "Git", "GitHub"],
+    },
+    {
+      id: 2,
+      role: "Software Engineering Intern",
+      company: "Bajaj Transport Management System",
+      type: "Internship",
+      location: "Addis Ababa",
+      duration: "2024",
+      description: "Built the Bajaj Transport Management System using C++ and SQL, implementing advanced search, sort, and GUI functionalities for transport management.",
+      technologies: ["C++", "SQL", "Data Structures"],
+    },
+  ],
+
+  education: {
+    degree: "Bachelor's in Software Engineering",
+    institution: "Debre Berhan University",
+    location: "Debre Berhan, Ethiopia",
+    duration: "Jun 2023 – Jun 2028",
+    highlights: ["Dean's List Student (2023-2024)", "Focus on Full-Stack Development & DSA"],
+  },
+
+  certifications: [
+    {
+      id: 1,
+      name: "Full Stack Web Development",
+      issuer: "Miracle Technology",
+      date: "Nov 2025 – Dec 2025",
+    },
+  ],
+
   projects: [
   {
     id: 1,
@@ -177,7 +223,6 @@ hackathons: [
       title: "Dean's List Student",
       year: "2023-2024",
       description: "Recognized for consistent academic excellence at Debre Berhan University.",
-      status: "Achieved",
       icon: "🏆"
     },
   ],

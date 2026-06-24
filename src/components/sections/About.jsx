@@ -5,7 +5,7 @@ import Card from '../ui/Card';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-800/60"></div>
       <div className="container-custom px-6 relative z-10">
         <AnimatedElement>
@@ -15,7 +15,6 @@ const About = () => {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Learn more about my journey, skills, and goals as a full stack developer.
-              My main focus is on building scalable, responsive, and user-friendly web applications using modern tools and frameworks such as React, Next.js, Node.js, and Tailwind CSS.
             </p>
           </div>
         </AnimatedElement>
@@ -81,40 +80,24 @@ const About = () => {
               </div>
 
               <div className="mt-8">
-                <h4 className="font-semibold text-primary mb-4">Current Focus</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-300">Frontend Development</span>
-                    <span className="text-primary">90%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
+                <h4 className="font-semibold text-primary mb-4">What I Bring</h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { label: "Frontend", icon: "🎨" },
+                    { label: "Backend", icon: "⚙️" },
+                    { label: "Database Design", icon: "🗄️" },
+                    { label: "Clean Code", icon: "✨" },
+                    { label: "Problem Solving", icon: "🧠" },
+                    { label: "Team Player", icon: "🤝" },
+                  ].map((item, i) => (
                     <div
-                      className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
-                      style={{ width: '90%' }}
-                    ></div>
-                  </div>
-
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-300">Backend Development</span>
-                    <span className="text-primary">85%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div
-                      className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
-                      style={{ width: '85%' }}
-                    ></div>
-                  </div>
-
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-300">Data Structures & Algorithms</span>
-                    <span className="text-primary">80%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div
-                      className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full"
-                      style={{ width: '80%' }}
-                    ></div>
-                  </div>
+                      key={i}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-primary/30 transition-colors"
+                    >
+                      <span className="text-lg">{item.icon}</span>
+                      <span className="text-gray-300 text-sm font-medium">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </Card>
